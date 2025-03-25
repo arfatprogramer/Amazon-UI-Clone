@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 10px;
+}
+
+/* genral hover class */
+.hover:hover{
+    border: 1px solid white;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #E3E6E6;
+    height: 200vh;
+}
+
+.header{
+    background-color: #131921;
+    height: 6rem;
+    color:#ffff;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+
+/*left dive */
+.left{
+    display: flex;
+}
+
+.logo img{
+    width: 14rem;
+}
+
+.nav-address{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-address img{
+ width: 2.6rem;
+}
+.nav-text h3{
+    color:rgb(186, 189, 193)
+}
+
+/***  search box css***/
+
+.moddle{
+    display: flex;
+    
+    width: auto;
+}
+.search{
+    display: flex; 
+    height: 4rem;
+    border: 2px soild white; 
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
+   
+}
+
+.dropdown{  
+    outline: none;
+   background-color: #d4d4d4;
+   border: none;
+   padding:0px 1rem;
+}
+
+.search-filed{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    width: 500px;
+    padding: 0px 10px;
+}
+
+.search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #131921;
+    background-color: #f7bd72;
+    font-size: 2rem;
+    width: 5rem;
+    
+}
+/**** right div css*****/
+
+
+.right{
+    height: 6rem;
+    display: flex;
+    gap: 15px;
+}
+
+.country-div img{
+    width: 30px;
+}
+.country-div{
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+}
+.country-div select{
+    background-color: transparent;
+    color: #d4d4d4;
+    font-weight: 800;
+    outline: none;
+    border: none;
+}
+
+.rignt-text{
+    display: grid;
+    align-items: center;
+}
+.rignt-text p{
+ font-size: 1.2rem;
+}
+.rignt-text h3{
+    font-size: 1.5rem;
+   }
+
+.cart{
+    position: relative;
+    font-size: 2.5rem;
+}
+.cartNumber{
+    position: absolute;
+       top: 3px;
+    right: 8px;
+    font-size: 1.2rem;
+    color: #F08804;
+    font-weight: 900;
+
+}
+
+/*second nav li */
+
+.nav-li-div{
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    background-color:#232F3E;
+    color: #E3E6E6;
+
+}
+.nav-li-div li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    padding: 0px 8px;
+    height: 4rem;
+    cursor: pointer;
+}
+.menu{
+    font-weight: 800;
+    
+}
+.menu span{
+    font-size: 2.5rem;
+    padding-right: 5px;
+}
+
+
+
+/********************************main css*****************************************/
+.slider{
+    position: relative;
+}
+.slider-img{
+    width: 100%;
+
+}
+
+/**First cart **/
+.slider-container{
+    position: absolute;
+    width: 100%;
+    top: 210px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.top-cart{
+    display: grid;
+    padding: 20px;
+    width: 350px;
+    background-color: #ffff;
+    
+}
+.images-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px 0px;
+    gap:10px;
+    flex-wrap: wrap;
+}
+.seemoretest{
+color: blue;
+padding: 6px;
+font-size: 1.5rem;
+}
