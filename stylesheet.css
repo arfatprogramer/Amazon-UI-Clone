@@ -5,6 +5,7 @@
 }
 :root{
     font-size: 10px;
+    height: 100vh;
 }
 
 /* genral hover class */
@@ -176,6 +177,8 @@ body{
 /********************************main css*****************************************/
 .slider{
     position: relative;
+    overflow: hidden;   
+    height: 40vh;
 }
 .slider-img{
     width: 100%;
@@ -184,30 +187,85 @@ body{
 
 /**First cart **/
 .slider-container{
-    position: absolute;
+    position: relative;
     width: 100%;
-    top: 210px;
+    top: 50%;
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-image: linear-gradient(#E3C5F3,#E3E6E6);
 
 }
 .top-cart{
-    display: grid;
+    display:flex;
+    flex-direction: column;
     padding: 20px;
-    width: 350px;
+    justify-content: space-between;
+    height:500px;
+    width:350px;
     background-color: #ffff;
+    cursor: pointer;
     
 }
 .images-div{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding:10px 0px;
     gap:10px;
     flex-wrap: wrap;
+}
+.images-div img{
+width:40%;
 }
 .seemoretest{
 color: blue;
 padding: 6px;
 font-size: 1.5rem;
+cursor: pointer;
+}
+
+
+
+/******Footer Css*******/
+
+footer{
+    background-color: #232F3E;
+    padding-top: 2px;
+    color: #d4d4d4;
+}
+.backtotop{
+background-color:#3f4b5a;
+width:100%;
+color: #d4d4d4;
+height: 5rem;
+outline: none;
+border: none;
+}
+.footer-content{
+    display: flex;
+    justify-content:space-around;
+    padding: 20px;
+
+}
+
+.footer-content .content a{
+    color: #d4d4d4;
+    display: block;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 1.5rem
+
+}
+.coperight{
+    background-color: #131A22;
+    height: 100px;
+    
+}
+.coperight h3{
+    width: 500px;
+    padding: 30px;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
 }
