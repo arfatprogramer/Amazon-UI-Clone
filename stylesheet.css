@@ -9,6 +9,11 @@
 }
 
 /* genral hover class */
+.hover {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+
+}
 .hover:hover{
     border: 1px solid white;
 }
@@ -21,18 +26,23 @@ body{
 
 .header{
     background-color: #131921;
-    height: 6rem;
+    height: 60px;
     color:#ffff;
     display: flex;  
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     padding: 0px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 /*left dive */
 .left{
     display: flex;
+    width: 800px;
 }
 
 .logo img{
@@ -42,44 +52,50 @@ body{
 .nav-address{
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     justify-content: center;
 }
 .nav-address img{
  width: 2.6rem;
 }
 .nav-text h3{
-    color:rgb(186, 189, 193)
+    color:rgb(186, 189, 193);
+    font-size: 0.9vw;
+    
 }
 
 /***  search box css***/
 
 .moddle{
     display: flex;
-    
-    width: auto;
+    width:100%;
 }
 .search{
     display: flex; 
-    height: 4rem;
+    width: 100%;
+    height: 40px;
     border: 2px soild white; 
     border-radius: 0.5rem;
     overflow: hidden;
-    
-   
 }
 
 .dropdown{  
     outline: none;
    background-color: #d4d4d4;
    border: none;
+   width: 60px;
    padding:0px 1rem;
+}
+.dropdown option{
+    background-color: #ffffff;
+    font-size: 1.2vw
 }
 
 .search-filed{
     outline: none;
     border: none;
-    font-size: 16px;
-    width: 500px;
+    font-size: 1vw;
+    width: 100%;
     padding: 0px 10px;
 }
 
@@ -89,21 +105,24 @@ body{
     align-items: center;
     color: #131921;
     background-color: #f7bd72;
-    font-size: 2rem;
-    width: 5rem;
+    font-size: 1.2vw;
+    width: 50px;
     
 }
 /**** right div css*****/
 
-
 .right{
-    height: 6rem;
+    height: 60px;
+    width: 900px;
     display: flex;
     gap: 15px;
 }
 
 .country-div img{
     width: 30px;
+}
+.country-div option{
+    color: black;
 }
 .country-div{
     display: flex;
@@ -123,21 +142,21 @@ body{
     align-items: center;
 }
 .rignt-text p{
- font-size: 1.2rem;
+ font-size: 1vw;
 }
 .rignt-text h3{
-    font-size: 1.5rem;
+    font-size: 1.1vw;
    }
 
 .cart{
     position: relative;
-    font-size: 2.5rem;
+    font-size: 1.6vw;
 }
 .cartNumber{
     position: absolute;
        top: 3px;
     right: 8px;
-    font-size: 1.2rem;
+    font-size: 1vw;
     color: #F08804;
     font-weight: 900;
 
@@ -148,33 +167,39 @@ body{
 .nav-li-div{
     display: flex;
     align-items: center;
-    height: 4rem;
+    height: 40px;
     background-color:#232F3E;
     color: #E3E6E6;
-
+    position: relative;
+    top: 60px;
+    width: 100%;
+    overflow: hidden;
 }
 .nav-li-div li{
     list-style: none;
     display: flex;
     align-items: center;
     white-space: nowrap;
-    font-size: 1.5rem;
-    padding: 0px 8px;
+    font-size: 1vw;
+    padding: 0px .4vw;
     height: 4rem;
     cursor: pointer;
 }
 .menu{
-    font-weight: 800;
-    
+    font-weight: 800;  
 }
 .menu span{
-    font-size: 2.5rem;
+    font-size: 1.5vw;
     padding-right: 5px;
 }
 
 
 
 /********************************main css*****************************************/
+.main-tag{
+padding-top: 60px;
+
+}
 .slider{
     position: relative;
     overflow: hidden;   
@@ -185,11 +210,10 @@ body{
 
 }
 
-/**First cart **/
+/**>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>First cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>**/
 .slider-container{
     position: relative;
     width: 100%;
-    top: 50%;
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
@@ -198,36 +222,293 @@ body{
 
 }
 .top-cart{
+    position: relative;
     display:flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 20px 40px 20px;
     justify-content: space-between;
-    height:500px;
+    height:420px;
     width:350px;
     background-color: #ffff;
     cursor: pointer;
     
 }
 .images-div{
-    display: flex;
-    justify-content: space-evenly;
+    display:grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 10px 1fr 10px;
+    column-gap: 10px;
+    justify-content:space-between;
     align-items: center;
-    gap:10px;
-    flex-wrap: wrap;
+    padding-bottom: 10px;
+
+ 
 }
 .images-div img{
-width:40%;
+    height: 80%;
+    /* object-fit: contain; */
+    width: 90%;
 }
+.images-div p{
+    font-size: 1vw;
+}
+
 .seemoretest{
+    position: absolute;
+    bottom: 0;
 color: blue;
-padding: 6px;
-font-size: 1.5rem;
-cursor: pointer;
+padding:0 0 6px  0;
+font-size: 1vw;
+}
+
+/* ..................second style dive........................  */
+.container{
+display: flex;
+gap: 20px;
+width: 100%;
+padding: 0px 20px;
+
+}
+.single-images-div{
+    height: 100%;
+}
+.single-images-div img{
+    width: 100%;
+    height: 100%;
+}
+/* >>>>>>>>>>>>>>>>> product selling dive >>>>>>>>>>>>>>>>>>> */
+.product-selling-div{
+    display: flex;
+}
+.selling-card{
+    display:flex;
+    flex-direction: column;
+    padding: 20px 20px 40px 20px;
+    justify-content: space-between;
+    height:420px;
+    width:350px;
+    background-color: #ffff;
+    cursor: pointer;
+}
+.selling-card img{
+    height: 170px;
+    object-fit: contain;
+    padding: 10px 0;
+}
+
+.selling-card .image-list {
+    display: flex;
+    gap: 10px;
+    
+}
+.selling-card .text p{
+    font-size: 1vw;
+    color: #717070;
+}
+
+.selling-card .text .prise{
+    font-size: 1.2vw;
+    color: #131921;
+    padding-bottom: 5px;
+}
+.selling-card .text .prise span{
+    font-size: 1vw;
+    color: #ccc;
+}
+
+.selling-card .image-list img{
+    height: 65px;
+    width: 65px;
+    object-fit: contain;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2px;
+
+}
+.active{
+    border:2px solid green;
 }
 
 
 
-/******Footer Css*******/
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Scroll slider    >>>>>>>>>>>>>>>>>>>>>>>> */
+.scroll-slider{
+    position: relative;
+    background-color: #fff;
+    height: 290px;
+    margin: 15px 20px;
+    padding: 20px 20px 5px 20px;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>  scroll button >>>>>>>>>>>>>>>>>>>>>>>*/
+.slider-button{
+    position: absolute;
+    top: 40%;
+    margin:0;
+    padding: 0;
+}
+.btn{
+    background-color: #fff; 
+    height: 100px;
+    width: 30px;
+    display: none;
+    border: transparent;
+}
+#btn-1{
+    left: 0px;
+}
+ #btn-2{
+    right: 0px;
+}
+
+.scroll-slider-text{
+    font-size: 1.5vw;
+}
+.scroll-slider-text a{
+    text-decoration: none;
+    font-size: 1vw;
+    padding-left: 10px;
+}
+.scroll-slider-images{
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    padding: 15px;
+    height: 240px;
+}
+/* width */
+.scroll-slider-images::-webkit-scrollbar {
+    height: 5px;
+  }
+    
+  /* Handle */
+  .scroll-slider-images::-webkit-scrollbar-thumb {
+    background:transparent;
+  }
+  
+  /* Handle on hover */
+  .scroll-slider-images:hover.scroll-slider-images::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+
+  .scroll-slider:hover .btn{
+    border: 1px solid black;
+    display: block;
+}
+
+/******.......................................      last page  Css      ......................................*******/
+
+.contain{
+    background-color: #fff;
+    margin:20px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.product-div{
+    padding: 20px;
+    border-top: 1px  solid rgb(178, 173, 173);
+    
+}
+.product{
+    display: flex;
+    padding: 0 20px;
+    overflow: auto;
+}
+.product-cart{
+   
+    gap: 10px;
+    width: 200px;
+    flex-shrink: 0;
+    padding: 10px;
+    font-size: 1vw;
+    
+}
+.product-cart .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-cart img{
+    margin: 20px 0px;
+    height: 150px;
+}
+
+.product-cart .ratingText{
+    font-size: 0.88vw;
+    color: #615f5f;
+}
+.product-cart .off-tag{
+    background-color: #CC0C39;
+    padding: 2px 4px;
+    font-size: 0.9vw;
+    border-radius: 4px;
+    color: white;
+}
+.product-cart .offer{
+    color: #CC0C39;
+    font-weight: 600;
+    font-size: 0.9vw;
+    padding: 2px;
+}
+.product-cart .ratingStars{
+    color:#DE7921;
+}
+.product-cart .ratingNumber{
+    font-size: 0.7vw;
+    color:#6219ff;
+}
+.product-cart .mrp{
+    font-size: 1.3vw;
+    font-weight: 550;
+}
+.product-cart .Delivering{
+    font-size: .9vw;
+}
+.singup-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    padding: 40px;
+    border: 1px  solid rgb(178, 173, 173);
+    border-left: none;
+    border-right: none;
+    
+}
+.singup-div h1{
+    font-size: 1.4vw;
+}
+.singup-div button{
+    padding: 7px 20px;
+    width: 16%;
+    border: none;
+    border-radius: 20px;
+    background-color: #FFD814;
+}
+.singup-div p{
+    margin-top: 6px;
+    font-size: 0.9vw;
+}
+
+
+.product::-webkit-scrollbar {
+    height: 5px;
+  }
+    
+  /* Handle */
+  .product::-webkit-scrollbar-thumb {
+    background:transparent;
+  }
+  
+  /* Handle on hover */
+  .product:hover.product::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+
+
+/******.......................................      Footer Css      ......................................*******/
 
 footer{
     background-color: #232F3E;
@@ -248,24 +529,74 @@ border: none;
     padding: 20px;
 
 }
+.footer-content .content h1{
+    font-size: 1.5vw;
+}
 
 .footer-content .content a{
     color: #d4d4d4;
     display: block;
     text-decoration: none;
     padding: 6px;
-    font-size: 1.5rem
+    font-size: 1vw
 
 }
+
+
+
+/* ................................footer-log...................................... */
+.footer-logo{
+    border-top:1px solid #d4d4d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 96px;
+   
+    
+}
+
+.footer-logo img{
+    width:130px;
+    padding-top: 40px;
+    padding-right: 20px;
+}
+.footer-logo select{
+color: #fff;
+font-size: 1vw;
+background-color: transparent;
+border: 1px solid #fff;
+padding: 5px 10px;
+border-radius:2px ;
+}
+.footer-logo select option{
+    color:black;
+}
+.footer-location{
+    font-size: 1vw;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius:2px ;
+    padding: 5px 20px;
+    
+}
+.footer-location img{
+    padding: 0;
+    width:18px;
+}
+
 .coperight{
     background-color: #131A22;
     height: 100px;
     
 }
 .coperight h3{
-    width: 500px;
+    
     padding: 30px;
     margin: auto;
-    font-size: 15px;
+    font-size: 1.1vw;
     text-align: center;
 }
